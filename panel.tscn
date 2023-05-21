@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://crdha6kbdmcy6"]
+
+[ext_resource type="Script" path="res://things.gd" id="1_rrg8d"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(170, 100)
+offset_right = 173.0
+offset_bottom = 98.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 2.0
+offset_right = 127.0
+offset_bottom = 28.0
+text = "Dead horse"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 67.0
+offset_right = 145.0
+offset_bottom = 93.0
+text = "Fatal injuries: 1"
+script = ExtResource("1_rrg8d")
+prefix = "Fatal injuries: "
+things = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 32.0
+offset_right = 106.0
+offset_bottom = 63.0
+text = "Beat"
+
+[connection signal="pressed" from="Button" to="Label2" method="_on_button_pressed"]
