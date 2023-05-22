@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://crdha6kbdmcy6"]
 
-[ext_resource type="Script" path="res://things.gd" id="1_rrg8d"]
+[ext_resource type="Script" path="res://horse flipper.gd" id="1_5npc5"]
 
-[node name="Panel" type="Panel"]
+[node name="UNicorn flipper" type="Panel"]
 custom_minimum_size = Vector2(170, 100)
 offset_right = 202.0
 offset_bottom = 128.0
@@ -22,8 +22,16 @@ offset_top = 94.0
 offset_right = 139.0
 offset_bottom = 120.0
 text = "Flippers: 0"
-script = ExtResource("1_rrg8d")
-prefix = "Flippers: "
+script = ExtResource("1_5npc5")
+prefix = null
+things = null
+prob = null
+cost = null
+flippers = null
+
+[node name="Timer" type="Timer" parent="Label2"]
+wait_time = 3.0
+autostart = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -34,4 +42,12 @@ offset_bottom = 85.0
 text = "Cost: 5 
 dead unicorns "
 
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 101.0
+offset_right = 198.0
+offset_bottom = 124.0
+
+[connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="Label2" method="_on_button_pressed"]
