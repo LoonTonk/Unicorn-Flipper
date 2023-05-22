@@ -4,8 +4,8 @@
 
 [node name="Panel" type="Panel"]
 custom_minimum_size = Vector2(170, 100)
-offset_right = 173.0
-offset_bottom = 98.0
+offset_right = 202.0
+offset_bottom = 128.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -13,25 +13,25 @@ offset_left = 38.0
 offset_top = 2.0
 offset_right = 127.0
 offset_bottom = 28.0
-text = "Dead horse"
+text = "Unicorn flipper"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 67.0
-offset_right = 145.0
-offset_bottom = 93.0
-text = "Fatal injuries: 1"
+offset_left = 51.0
+offset_top = 94.0
+offset_right = 139.0
+offset_bottom = 120.0
+text = "Flippers: 0"
 script = ExtResource("1_rrg8d")
-prefix = "Fatal injuries: "
-things = 1
+prefix = "Flippers: "
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 32.0
-offset_right = 106.0
-offset_bottom = 63.0
-text = "Beat"
+offset_left = 13.0
+offset_top = 31.0
+offset_right = 191.0
+offset_bottom = 85.0
+text = "Cost: 5 
+dead unicorns "
 
 [connection signal="pressed" from="Button" to="Label2" method="_on_button_pressed"]

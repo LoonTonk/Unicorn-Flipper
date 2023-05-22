@@ -22,7 +22,7 @@ offset_left = -124.0
 offset_top = -26.0
 offset_right = 124.0
 offset_bottom = 26.496
-text = "Brutally murder a horse"
+text = "Flip a unicorn"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -35,10 +35,10 @@ offset_left = -57.0
 offset_top = 33.0
 offset_right = 57.0
 offset_bottom = 59.0
-text = "Dead horses: 0"
+text = "Dead unicorns: 0"
 vertical_alignment = 1
 script = ExtResource("1_b1ijj")
-prefix = "Dead horses: "
+prefix = "Dead unicorns: "
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
