@@ -2,10 +2,12 @@ extends Label
 
 @export var prefix: String = "Things: "
 @export var prob: float = 0.5
-@export var cost: int = 5
-@export var flippers: int = 0
+@export var baseCost: int = 5
+var cost: int = baseCost
+@export var flippers: int = 10000
 @onready var unicorns: Node = get_node("/root/Control/Unicorn num")
 @onready var box: Node = get_node("../VScrollBar/VBoxContainer")
+@onready var button: Node = get_node("../Button")
 var timer = preload("res://timer.tscn")
 
 func _on_button_pressed():
@@ -14,6 +16,8 @@ func _on_button_pressed():
 		flippers += 1
 		text = prefix + str(flippers)
 		box.add_child(timer.instantiate())
+		cost = baseCost * pow(1.15, flippers)
+		button.text = "Cost: " + str(cost)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
