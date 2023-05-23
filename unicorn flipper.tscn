@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnevuap87483k"]
+[gd_scene load_steps=2 format=3 uid="uid://midbbqgqtogg"]
 
-[ext_resource type="Script" path="res://horse flipper.gd" id="1_5npc5"]
+[ext_resource type="Script" path="res://flipper.gd" id="1_4jvxd"]
 
 [node name="Unicorn flipper" type="Panel"]
 custom_minimum_size = Vector2(170, 100)
@@ -22,11 +22,7 @@ offset_top = 94.0
 offset_right = 139.0
 offset_bottom = 120.0
 text = "Flippers: 0"
-script = ExtResource("1_5npc5")
-
-[node name="Timer" type="Timer" parent="Label2"]
-wait_time = 3.0
-autostart = true
+script = ExtResource("1_4jvxd")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -46,5 +42,15 @@ offset_bottom = -7.0
 text = "Each flipper flips one Unicorn every 3 seconds. If it lands on its head, it dies."
 autowrap_mode = 3
 
-[connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_timer_timeout"]
+[node name="VScrollBar" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 137.0
+offset_right = 226.0
+offset_bottom = 441.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VScrollBar"]
+custom_minimum_size = Vector2(225, 300)
+layout_mode = 2
+
 [connection signal="pressed" from="Button" to="Label2" method="_on_button_pressed"]

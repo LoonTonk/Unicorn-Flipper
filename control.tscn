@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl5rufebb5cjb"]
 
 [ext_resource type="Script" path="res://things.gd" id="1_b1ijj"]
-[ext_resource type="PackedScene" uid="uid://dnevuap87483k" path="res://unicorn flipper.tscn" id="2_b0mt8"]
+[ext_resource type="PackedScene" uid="uid://midbbqgqtogg" path="res://unicorn flipper.tscn" id="2_b0mt8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -41,11 +41,10 @@ script = ExtResource("1_b1ijj")
 prefix = "Dead unicorns: "
 
 [node name="Unicorn flipper" parent="." instance=ExtResource("2_b0mt8")]
-visible = false
 layout_mode = 0
-offset_left = 211.0
-offset_top = 260.0
-offset_right = 413.0
-offset_bottom = 388.0
+offset_left = 218.0
+offset_top = 125.0
+offset_right = 420.0
+offset_bottom = 253.0
 
 [connection signal="pressed" from="Button" to="Unicorn num" method="_on_button_pressed"]
