@@ -20,7 +20,10 @@ func _process(delta):
 	if unicorns.things == cost:
 		owner.visible = true
 
-func flip():
+func flip() -> bool:
 	#for i in range(flippers):
 	if randf() < prob:
 		unicorns.change_things(1)
+		return true
+	else:
+		return false
