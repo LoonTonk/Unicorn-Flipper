@@ -4,11 +4,13 @@ extends Timer
 @onready var flipper = get_node("/root/Control/Unicorn flipper/Label2")
 @onready var color_timer = get_node("color flash")
 
-var my_style = StyleBoxFlat.new()
-var other_style = StyleBoxFlat.new()
+var success = StyleBoxFlat.new()
+var failure = StyleBoxFlat.new()
+var default = StyleBoxFlat.new()
 func _ready():
-	my_style.set_bg_color(Color(0,0,1,1))
-	other_style.set_bg_color(Color(1,1,0,1))
+	success.set_bg_color(Color(0,0.5,0,1))
+	failure.set_bg_color(Color(0.5,0,0,1))
+	default.set_bg_color(Color(0,0,0,0.5))
 	# Set the "normal" style to be your newly created style.
 
 
@@ -19,6 +21,11 @@ func _process(delta):
 
 func _on_timeout():
 	if flipper.flip():
-		bar.set("custom_styles/normal", my_style)
+		bar.set("theme_override_styles/background", success)
 	else:
-		bar.set("custom_styles/normal", other_style)
+		bar.set("theme_override_styles/background", failure)
+	color_timer.start()
+
+
+func _on_color_flash_timeout():
+	bar.set("theme_override_styles/background", default)
