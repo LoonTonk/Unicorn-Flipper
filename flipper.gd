@@ -4,7 +4,7 @@ extends Label
 @export var prob: float = 0.5
 @export var baseCost: int = 5
 var cost: int = baseCost
-@export var flippers: int = 10000
+@export var flippers: int = 0
 @onready var unicorns: Node = get_node("/root/Control/Unicorn num")
 @onready var box: Node = get_node("../VScrollBar/VBoxContainer")
 @onready var button: Node = get_node("../Button")
