@@ -17,6 +17,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	bar.value = (wait_time - time_left)*bar.max_value/wait_time
+	var color = StyleBoxFlat.new()
+	color.set_bg_color(bar.get("theme_override_styles/background").get_bg_color().lerp(default.get_bg_color(), delta))
+	bar.set("theme_override_styles/background", color)
 
 
 func _on_timeout():
@@ -28,4 +31,5 @@ func _on_timeout():
 
 
 func _on_color_flash_timeout():
-	bar.set("theme_override_styles/background", default)
+	pass
+	#bar.set("theme_override_styles/background", default)
