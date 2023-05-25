@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl5rufebb5cjb"]
+[gd_scene load_steps=4 format=3 uid="uid://cl5rufebb5cjb"]
 
 [ext_resource type="Script" path="res://things.gd" id="1_b1ijj"]
 [ext_resource type="PackedScene" uid="uid://midbbqgqtogg" path="res://unicorn flipper.tscn" id="2_b0mt8"]
+[ext_resource type="PackedScene" uid="uid://chn56xmrkkor1" path="res://unicorn_flipper_v_2.tscn" id="3_67w5e"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -52,5 +53,13 @@ offset_left = -358.0
 offset_top = -199.0
 offset_right = -156.0
 offset_bottom = -71.0
+
+[node name="Unicorn flipper V2" parent="." instance=ExtResource("3_67w5e")]
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 178.0
+offset_bottom = 180.0
 
 [connection signal="pressed" from="Button" to="Unicorn num" method="_on_button_pressed"]
