@@ -25,6 +25,10 @@ offset_bottom = 172.0
 text = "Flipper V2s: 0"
 script = ExtResource("1_o7bdg")
 prefix = "Flipper V2s: "
+prob = null
+baseCost = null
+multiplier = null
+flippers = null
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

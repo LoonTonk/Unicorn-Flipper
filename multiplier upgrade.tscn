@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dyjst5h8x82i4"]
+
+[node name="Unicorn flipper" type="Panel"]
+custom_minimum_size = Vector2(170, 100)
+offset_right = 202.0
+offset_bottom = 135.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 29.0
+offset_right = 188.0
+offset_bottom = 81.0
+text = "Current Unicorn Flip fatality rate: 50%"
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 80.0
+offset_right = 197.0
+offset_bottom = 132.0
+text = "Current Unicorns flipped at once: 1"
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 139.0
+offset_bottom = 36.0
+text = "Upgrades:"
+autowrap_mode = 3
+
+[node name="VScrollBar" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 137.0
+offset_right = 226.0
+offset_bottom = 441.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VScrollBar"]
+custom_minimum_size = Vector2(225, 300)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 14.0
+offset_right = 160.0
+offset_bottom = 40.0
+text = "Unicorn flipper"
+
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 106.0
+offset_right = 174.0
+offset_bottom = 132.0
+text = "Increases thing"
+
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 97.0
+text = "Cost: 5
+dead Unicorns"
+
+[node name="Panel2" type="Panel" parent="VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 1.0
+offset_right = 160.0
+offset_bottom = 27.0
+text = "hi"
+
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 106.0
+offset_right = 174.0
+offset_bottom = 132.0
+text = "Increases thing"
+
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Panel2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 97.0
+text = "Cost: 5
+dead Unicorns"
+
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Panel/Button" to="VScrollBar/VBoxContainer/Panel/Label2" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Panel2/Button" to="VScrollBar/VBoxContainer/Panel2/Label2" method="_on_button_pressed"]

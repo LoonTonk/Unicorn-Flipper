@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl5rufebb5cjb"]
+[gd_scene load_steps=5 format=3 uid="uid://cl5rufebb5cjb"]
 
 [ext_resource type="Script" path="res://things.gd" id="1_b1ijj"]
 [ext_resource type="PackedScene" uid="uid://midbbqgqtogg" path="res://unicorn flipper.tscn" id="2_b0mt8"]
 [ext_resource type="PackedScene" uid="uid://chn56xmrkkor1" path="res://unicorn_flipper_v_2.tscn" id="3_67w5e"]
+[ext_resource type="PackedScene" uid="uid://dyjst5h8x82i4" path="res://multiplier upgrade.tscn" id="4_ci72w"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -61,5 +62,8 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 178.0
 offset_bottom = 180.0
+
+[node name="Upgrades" parent="." instance=ExtResource("4_ci72w")]
+layout_mode = 0
 
 [connection signal="pressed" from="Button" to="Unicorn num" method="_on_button_pressed"]

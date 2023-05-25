@@ -28,7 +28,7 @@ func _process(delta):
 func flip() -> bool:
 	#for i in range(flippers):
 	if randf() < prob:
-		unicorns.change_things(1 * multiplier)
+		unicorns.change_things(horseMultiplier * multiplier)
 		return true
 	else:
 		return false
