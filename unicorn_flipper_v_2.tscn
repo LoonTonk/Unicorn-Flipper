@@ -36,6 +36,7 @@ text = "Cost: 10
 dead Unicorns"
 
 [node name="VScrollBar" type="ScrollContainer" parent="."]
+layout_mode = 0
 offset_left = -16.0
 offset_top = 179.0
 offset_right = 209.0
