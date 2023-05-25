@@ -17,6 +17,7 @@ autostart = true
 script = ExtResource("1_vjvdt")
 
 [node name="M" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 34.0

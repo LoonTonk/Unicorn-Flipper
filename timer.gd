@@ -1,7 +1,7 @@
 extends Timer
 
 @onready var bar = get_node("..")
-@onready var flipper = get_node("/root/Control/Unicorn flipper/Label2")
+@onready var flipper = get_node("../../../../Label2")
 @onready var mult = get_node("../M")
 
 var success = StyleBoxFlat.new()
@@ -11,8 +11,8 @@ func _ready():
 	success.set_bg_color(Color(0,0.5,0,1))
 	failure.set_bg_color(Color(0.5,0,0,1))
 	default.set_bg_color(Color(0,0,0,0.5))
-	# Set the "normal" style to be your newly created style.
-
+	if flipper.multiplier > 0:
+		mult.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -27,4 +27,4 @@ func _on_timeout():
 		bar.set("theme_override_styles/background", success)
 	else:
 		bar.set("theme_override_styles/background", failure)
-	mult.text = "x" + flipper.multiplier
+	mult.text = "x" + str(flipper.multiplier)

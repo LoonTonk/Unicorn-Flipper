@@ -24,9 +24,6 @@ offset_bottom = 120.0
 text = "Flippers: 0"
 script = ExtResource("1_4jvxd")
 prefix = "Flippers: "
-prob = null
-baseCost = null
-flippers = null
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -41,8 +38,8 @@ dead Unicorns"
 layout_mode = 0
 offset_left = 10.0
 offset_top = -111.0
-offset_right = 191.0
-offset_bottom = -7.0
+offset_right = 226.0
+offset_bottom = 19.0
 text = "Each flipper flips 1 Unicorn(s) every 3 seconds. If it lands on its head, it dies."
 autowrap_mode = 3
 

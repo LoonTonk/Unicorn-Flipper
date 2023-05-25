@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://chn56xmrkkor1"]
 
-[ext_resource type="Script" path="res://Unicorn Flipper V2.gd" id="1_o7bdg"]
+[ext_resource type="Script" path="res://flipper.gd" id="1_ci548"]
 
 [node name="Unicorn flipper V2" type="Panel"]
 offset_left = 864.0
@@ -23,12 +23,10 @@ offset_top = 149.0
 offset_right = 171.0
 offset_bottom = 172.0
 text = "Flipper V2s: 0"
-script = ExtResource("1_o7bdg")
+script = ExtResource("1_ci548")
 prefix = "Flipper V2s: "
-prob = null
-baseCost = null
-multiplier = null
-flippers = null
+baseCost = 10
+multiplier = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

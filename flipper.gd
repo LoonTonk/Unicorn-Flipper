@@ -3,12 +3,14 @@ extends Label
 @export var prefix: String = "Things: "
 @export var prob: float = 0.5
 @export var baseCost: int = 5
-var cost: int = baseCost
+@export var multiplier: int = -1
+@onready var cost: int = baseCost
 @export var flippers: int = 0
 @onready var unicorns: Node = get_node("/root/Control/Unicorn num")
 @onready var box: Node = get_node("../VScrollBar/VBoxContainer")
 @onready var button: Node = get_node("../Button")
 var timer = preload("res://timer.tscn")
+@onready var horseMultiplier: int = get_node("/root/Control/Unicorn num").horseMultiplier
 
 func _on_button_pressed():
 	if unicorns.things >= cost:
@@ -25,9 +27,14 @@ func _process(delta):
 		owner.visible = true
 
 func flip() -> bool:
-	#for i in range(flippers):
-	if randf() < prob:
-		unicorns.change_things(horseMultiplier)
-		return true
-	else:
-		return false
+		if randf() < prob:
+			if multiplier == -1:
+				unicorns.change_things(horseMultiplier)
+			else:
+				unicorns.change_things(horseMultiplier * multiplier)
+				multiplier += 1
+			return true
+		else:
+			if multiplier > 1:
+				multiplier = 1
+			return false
