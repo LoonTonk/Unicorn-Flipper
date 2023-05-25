@@ -2,7 +2,7 @@ extends Timer
 
 @onready var bar = get_node("..")
 @onready var flipper = get_node("/root/Control/Unicorn flipper/Label2")
-@onready var color_timer = get_node("color flash")
+@onready var mult = get_node("../M")
 
 var success = StyleBoxFlat.new()
 var failure = StyleBoxFlat.new()
@@ -27,9 +27,4 @@ func _on_timeout():
 		bar.set("theme_override_styles/background", success)
 	else:
 		bar.set("theme_override_styles/background", failure)
-	color_timer.start()
-
-
-func _on_color_flash_timeout():
-	pass
-	#bar.set("theme_override_styles/background", default)
+	mult.text = "x" + flipper.multiplier
