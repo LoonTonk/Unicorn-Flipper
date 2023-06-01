@@ -3,6 +3,7 @@ extends Timer
 @onready var bar = get_node("..")
 @onready var flipper = get_node("../../../../Label2")
 @onready var mult = get_node("../M")
+var multiplier: int = 1
 
 var success = StyleBoxFlat.new()
 var failure = StyleBoxFlat.new()
@@ -11,7 +12,7 @@ func _ready():
 	success.set_bg_color(Color(0,0.5,0,1))
 	failure.set_bg_color(Color(0.5,0,0,1))
 	default.set_bg_color(Color(0,0,0,0.5))
-	if flipper.multiplier > 0:
+	if flipper.multiply:
 		mult.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,8 +24,11 @@ func _process(delta):
 
 
 func _on_timeout():
-	if flipper.flip():
+	if flipper.flip(multiplier):
 		bar.set("theme_override_styles/background", success)
+		if flipper.multiply:
+			multiplier += 1
 	else:
 		bar.set("theme_override_styles/background", failure)
-	mult.text = "x" + str(flipper.multiplier)
+		multiplier = 1
+	mult.text = "x" + str(multiplier)
