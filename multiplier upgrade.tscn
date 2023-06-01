@@ -45,15 +45,12 @@ offset_bottom = 441.0
 custom_minimum_size = Vector2(225, 300)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="VScrollBar/VBoxContainer"]
+[node name="Probincrease" type="Panel" parent="VScrollBar/VBoxContainer"]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
-prefix = null
-baseCost = null
-probIncreasers = null
 
-[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease"]
 layout_mode = 0
 offset_left = 43.0
 offset_top = 14.0
@@ -61,7 +58,7 @@ offset_right = 160.0
 offset_bottom = 40.0
 text = "Flavor text 1"
 
-[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 93.0
@@ -70,7 +67,7 @@ offset_bottom = 186.0
 text = "Increases probability of Unicorn death by 2%"
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Panel"]
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 43.0
@@ -108,5 +105,5 @@ offset_bottom = 97.0
 text = "Cost: 5
 dead Unicorns"
 
-[connection signal="pressed" from="VScrollBar/VBoxContainer/Panel/Button" to="VScrollBar/VBoxContainer/Panel" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease/Button" to="VScrollBar/VBoxContainer/Probincrease" method="_on_button_pressed"]
 [connection signal="pressed" from="VScrollBar/VBoxContainer/Panel2/Button" to="VScrollBar/VBoxContainer/Panel2/Label2" method="_on_button_pressed"]

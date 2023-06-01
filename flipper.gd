@@ -17,7 +17,7 @@ func _on_button_pressed():
 	if unicorns.things >= cost:
 		unicorns.change_things(-cost)
 		flippers += 1
-		text.text = prefix + str(flippers)
+		text.text = prefix + str(prob)
 		box.add_child(timer.instantiate())
 		cost = baseCost * pow(1.15, flippers)
 		button.text = "Cost: " + str(cost) + "\ndead Unicorns"
