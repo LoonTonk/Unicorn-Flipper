@@ -32,6 +32,7 @@ func _process(delta):
 func flip(multiplier: int = 1) -> bool:
 		if randf() > prob + insurance if insured else prob:
 			unicorns.change_things(flipMultiplier * multiplier)
+			insured = false
 			return true
 		else:
 			if insurance > 0:
