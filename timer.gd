@@ -1,7 +1,7 @@
 extends Timer
 
 @onready var bar = get_node("..")
-@onready var flipper = get_node("../../../../Label2")
+@onready var flipper = get_node("/")
 @onready var mult = get_node("../M")
 var multiplier: int = 1
 

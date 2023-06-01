@@ -6,6 +6,8 @@
 custom_minimum_size = Vector2(170, 100)
 offset_right = 202.0
 offset_bottom = 128.0
+script = ExtResource("1_4jvxd")
+prefix = "Flippers: "
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -22,8 +24,6 @@ offset_top = 94.0
 offset_right = 139.0
 offset_bottom = 120.0
 text = "Flippers: 0"
-script = ExtResource("1_4jvxd")
-prefix = "Flippers: "
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -54,4 +54,4 @@ offset_bottom = 441.0
 custom_minimum_size = Vector2(225, 300)
 layout_mode = 2
 
-[connection signal="pressed" from="Button" to="Label2" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
