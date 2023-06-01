@@ -41,7 +41,7 @@ func _on_button_pressed():
 				unicorns.clickMultiplier += 1
 				label5.text = "Current Unicorns unalived on click: " + str(1+count)
 			type.INSUR:
-				flipper2.insurance += .10			
+				flipper2.insurance += .10
 				label6.text = "Current success boost on flip failure: " + str(10 * count) + "%"
 		visible = false
 

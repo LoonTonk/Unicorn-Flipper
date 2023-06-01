@@ -4,6 +4,7 @@ extends Timer
 @onready var flipper = get_node("../../../..")
 @onready var mult = get_node("../M")
 var multiplier: int = 1
+var insured: bool = false
 
 var success = StyleBoxFlat.new()
 var failure = StyleBoxFlat.new()
@@ -24,11 +25,14 @@ func _process(delta):
 
 
 func _on_timeout():
-	if flipper.flip(multiplier):
+	if flipper.flip(multiplier, insured):
 		bar.set("theme_override_styles/background", success)
 		if flipper.multiply:
 			multiplier += 1
+		insured = false
 	else:
 		bar.set("theme_override_styles/background", failure)
 		multiplier = 1
+		if flipper.insurance > 0:
+			insured = true
 	mult.text = "x" + str(multiplier)

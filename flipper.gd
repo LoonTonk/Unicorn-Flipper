@@ -13,7 +13,6 @@ extends Panel
 var timer = preload("res://timer.tscn")
 @onready var flipMultiplier: int = 1
 var insurance: float = 0
-var insured: bool = false
 
 func _on_button_pressed():
 	if unicorns.things >= cost:
@@ -29,12 +28,10 @@ func _process(delta):
 	if unicorns.things == baseCost:
 		visible = true
 
-func flip(multiplier: int = 1) -> bool:
-		if randf() > prob + insurance if insured else prob:
+func flip(multiplier: int = 1, insured: bool = false) -> bool:
+		print((prob + insurance) if insured else prob)
+		if randf() < ((prob + insurance) if insured else prob):
 			unicorns.change_things(flipMultiplier * multiplier)
-			insured = false
 			return true
 		else:
-			if insurance > 0:
-				insured = true
 			return false
