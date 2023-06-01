@@ -28,7 +28,7 @@ func _on_button_pressed():
 			type.MULTV2:
 				flipper2.flipMultiplier += 1
 			type.INSUR:
-				pass
+				flipper2.insurance += .10
 			type.MULTC:
 				unicorns.clickMultiplier += 1
 		visible = false
