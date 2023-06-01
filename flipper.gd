@@ -11,7 +11,7 @@ extends Panel
 @onready var box: Node = get_node("VScrollBar/VBoxContainer")
 @onready var button: Node = get_node("Button")
 var timer = preload("res://timer.tscn")
-@onready var horseMultiplier: int = get_node("/root/Control/Unicorn num").horseMultiplier
+@onready var flipMultiplier: int = 1
 
 func _on_button_pressed():
 	if unicorns.things >= cost:
@@ -29,7 +29,7 @@ func _process(delta):
 
 func flip(multiplier: int = 1) -> bool:
 		if randf() > prob:
-			unicorns.change_things(horseMultiplier * multiplier)
+			unicorns.change_things(flipMultiplier * multiplier)
 			return true
 		else:
 			return false

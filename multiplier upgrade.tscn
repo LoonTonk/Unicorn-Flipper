@@ -45,12 +45,12 @@ offset_bottom = 441.0
 custom_minimum_size = Vector2(225, 300)
 layout_mode = 2
 
-[node name="Probincrease" type="Panel" parent="VScrollBar/VBoxContainer"]
+[node name="Probincrease1" type="Panel" parent="VScrollBar/VBoxContainer"]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
 
-[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease"]
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease1"]
 layout_mode = 0
 offset_left = 43.0
 offset_top = 14.0
@@ -58,7 +58,7 @@ offset_right = 160.0
 offset_bottom = 40.0
 text = "Flavor text 1"
 
-[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease"]
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease1"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 93.0
@@ -67,7 +67,7 @@ offset_bottom = 186.0
 text = "Increases probability of Unicorn death by 2%"
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease"]
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease1"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 43.0
@@ -76,27 +76,30 @@ offset_bottom = 97.0
 text = "Cost: 5
 dead Unicorns"
 
-[node name="Panel2" type="Panel" parent="VScrollBar/VBoxContainer"]
+[node name="Probincrease2" type="Panel" parent="VScrollBar/VBoxContainer"]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
+script = ExtResource("1_xwt3l")
+upgradeType = 1
 
-[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Panel2"]
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
 offset_left = 43.0
-offset_top = 1.0
+offset_top = 14.0
 offset_right = 160.0
-offset_bottom = 27.0
-text = "hi"
+offset_bottom = 40.0
+text = "Flavor text 1"
 
-[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Panel2"]
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 106.0
-offset_right = 174.0
-offset_bottom = 132.0
-text = "Increases thing"
+offset_left = 23.0
+offset_top = 93.0
+offset_right = 210.0
+offset_bottom = 186.0
+text = "Increases probability of Unicorn death by 2%"
+autowrap_mode = 3
 
-[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Panel2"]
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 43.0
@@ -105,5 +108,137 @@ offset_bottom = 97.0
 text = "Cost: 5
 dead Unicorns"
 
-[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease/Button" to="VScrollBar/VBoxContainer/Probincrease" method="_on_button_pressed"]
-[connection signal="pressed" from="VScrollBar/VBoxContainer/Panel2/Button" to="VScrollBar/VBoxContainer/Panel2/Label2" method="_on_button_pressed"]
+[node name="Probincrease3" type="Panel" parent="VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+script = ExtResource("1_xwt3l")
+upgradeType = 2
+
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease3"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 14.0
+offset_right = 160.0
+offset_bottom = 40.0
+text = "Flavor text 1"
+
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease3"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 93.0
+offset_right = 210.0
+offset_bottom = 186.0
+text = "Increases probability of Unicorn death by 2%"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease3"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 97.0
+text = "Cost: 5
+dead Unicorns"
+
+[node name="Probincrease4" type="Panel" parent="VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+script = ExtResource("1_xwt3l")
+upgradeType = 4
+
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease4"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 14.0
+offset_right = 160.0
+offset_bottom = 40.0
+text = "Flavor text 1"
+
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease4"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 93.0
+offset_right = 210.0
+offset_bottom = 186.0
+text = "Increases probability of Unicorn death by 2%"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease4"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 97.0
+text = "Cost: 5
+dead Unicorns"
+
+[node name="Probincrease5" type="Panel" parent="VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+script = ExtResource("1_xwt3l")
+upgradeType = 5
+
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease5"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 14.0
+offset_right = 160.0
+offset_bottom = 40.0
+text = "Flavor text 1"
+
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease5"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 93.0
+offset_right = 210.0
+offset_bottom = 186.0
+text = "Increases probability of Unicorn death by 2%"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease5"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 97.0
+text = "Cost: 5
+dead Unicorns"
+
+[node name="Probincrease6" type="Panel" parent="VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+script = ExtResource("1_xwt3l")
+upgradeType = 3
+
+[node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease6"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 14.0
+offset_right = 160.0
+offset_bottom = 40.0
+text = "Flavor text 1"
+
+[node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease6"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 93.0
+offset_right = 210.0
+offset_bottom = 186.0
+text = "Increases probability of Unicorn death by 2%"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease6"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 97.0
+text = "Cost: 5
+dead Unicorns"
+
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease1/Button" to="VScrollBar/VBoxContainer/Probincrease1" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease2/Button" to="VScrollBar/VBoxContainer/Probincrease2" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease3/Button" to="VScrollBar/VBoxContainer/Probincrease3" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease4/Button" to="VScrollBar/VBoxContainer/Probincrease4" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease5/Button" to="VScrollBar/VBoxContainer/Probincrease5" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease6/Button" to="VScrollBar/VBoxContainer/Probincrease6" method="_on_button_pressed"]
