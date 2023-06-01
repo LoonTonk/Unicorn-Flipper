@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dyjst5h8x82i4"]
+[gd_scene load_steps=2 format=3 uid="uid://dyjst5h8x82i4"]
+
+[ext_resource type="Script" path="res://probIncrease.gd" id="1_inawk"]
 
 [node name="Unicorn flipper" type="Panel"]
 custom_minimum_size = Vector2(170, 100)
@@ -53,7 +55,7 @@ offset_left = 43.0
 offset_top = 14.0
 offset_right = 160.0
 offset_bottom = 40.0
-text = "Unicorn flipper"
+text = "Flavor text 1"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
 layout_mode = 0
@@ -62,6 +64,7 @@ offset_top = 106.0
 offset_right = 174.0
 offset_bottom = 132.0
 text = "Increases thing"
+script = ExtResource("1_inawk")
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Panel"]
 layout_mode = 0
