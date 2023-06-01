@@ -1,51 +1,91 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3t68sgibjqtq"]
+[gd_scene load_steps=3 format=3 uid="uid://c3t68sgibjqtq"]
 
 [ext_resource type="Script" path="res://upgrades.gd" id="1_xwt3l"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ae3ok"]
+font_size = 14
+
 [node name="Upgrades" type="Panel"]
 custom_minimum_size = Vector2(170, 100)
-offset_right = 202.0
-offset_bottom = 135.0
+offset_right = 436.0
+offset_bottom = 240.0
 
-[node name="Label" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(170, 0)
 layout_mode = 0
-offset_left = 22.0
-offset_top = 29.0
-offset_right = 188.0
-offset_bottom = 81.0
-text = "Current Unicorn Flip fatality rate: 50%"
-autowrap_mode = 3
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 435.0
+offset_bottom = 232.0
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 80.0
-offset_right = 197.0
-offset_bottom = 132.0
-text = "Current Unicorns flipped at once: 1"
-autowrap_mode = 3
-
-[node name="Label3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 6.0
-offset_right = 139.0
-offset_bottom = 36.0
+[node name="upgrade" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
 text = "Upgrades:"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "Current Unicorn Flipper V1 fatality rate: 50%"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "Current Unicorn Flipper V2 fatality rate: 50%"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "Current Unicorns unalived on Flipper V1 Success: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "Current Unicorns unalived on Flipper V2 Success: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "Current Unicorns unalived on click: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "Current success boost on flip failure: 0%"
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="VScrollBar" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 137.0
-offset_right = 226.0
-offset_bottom = 441.0
+offset_top = 272.0
+offset_right = 511.0
+offset_bottom = 649.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VScrollBar"]
-custom_minimum_size = Vector2(225, 300)
+[node name="VBoxContainer" type="GridContainer" parent="VScrollBar"]
+custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
 
 [node name="Probincrease1" type="Panel" parent="VScrollBar/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
@@ -64,7 +104,7 @@ offset_left = 23.0
 offset_top = 93.0
 offset_right = 210.0
 offset_bottom = 186.0
-text = "Increases probability of Unicorn death by 2%"
+text = "Increases Flipper V1 success rate by 2%"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease1"]
@@ -77,6 +117,7 @@ text = "Cost: 5
 dead Unicorns"
 
 [node name="Probincrease2" type="Panel" parent="VScrollBar/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
@@ -88,7 +129,7 @@ offset_left = 43.0
 offset_top = 14.0
 offset_right = 160.0
 offset_bottom = 40.0
-text = "Flavor text 1"
+text = "Flavor text 2"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
@@ -96,7 +137,7 @@ offset_left = 23.0
 offset_top = 93.0
 offset_right = 210.0
 offset_bottom = 186.0
-text = "Increases probability of Unicorn death by 2%"
+text = "Increases Flipper V2 success rate by 2%"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease2"]
@@ -120,15 +161,15 @@ offset_left = 43.0
 offset_top = 14.0
 offset_right = 160.0
 offset_bottom = 40.0
-text = "Flavor text 1"
+text = "Flavor text 3"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease3"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 93.0
-offset_right = 210.0
-offset_bottom = 186.0
-text = "Increases probability of Unicorn death by 2%"
+offset_left = -1.0
+offset_top = 92.0
+offset_right = 231.0
+offset_bottom = 185.0
+text = "Increases Unicorns unalived on Flipper V1 success by 1"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease3"]
@@ -152,15 +193,15 @@ offset_left = 43.0
 offset_top = 14.0
 offset_right = 160.0
 offset_bottom = 40.0
-text = "Flavor text 1"
+text = "Flavor text 4"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease4"]
 layout_mode = 0
-offset_left = 23.0
+offset_left = -1.0
 offset_top = 93.0
-offset_right = 210.0
+offset_right = 226.0
 offset_bottom = 186.0
-text = "Increases probability of Unicorn death by 2%"
+text = "Increases Unicorns unalived on Flipper V2 success by 1"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease4"]
@@ -184,15 +225,15 @@ offset_left = 43.0
 offset_top = 14.0
 offset_right = 160.0
 offset_bottom = 40.0
-text = "Flavor text 1"
+text = "Flavor text 5"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease5"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 93.0
-offset_right = 210.0
-offset_bottom = 186.0
-text = "Increases probability of Unicorn death by 2%"
+offset_left = -1.0
+offset_top = 92.0
+offset_right = 233.0
+offset_bottom = 185.0
+text = "Increases Unicorns manually flipped at a time by 1"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease5"]
@@ -212,19 +253,20 @@ upgradeType = 3
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease6"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 14.0
-offset_right = 160.0
-offset_bottom = 40.0
-text = "Flavor text 1"
+offset_left = 10.0
+offset_top = 16.0
+offset_right = 217.0
+offset_bottom = 42.0
+text = "Unicorn Flipping Insurance"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease6"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 93.0
-offset_right = 210.0
-offset_bottom = 186.0
-text = "Increases probability of Unicorn death by 2%"
+offset_left = 3.0
+offset_top = 103.0
+offset_right = 249.0
+offset_bottom = 196.0
+text = "If a flipper fails, increase probability of next flip succeeding by 10%"
+label_settings = SubResource("LabelSettings_ae3ok")
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease6"]
