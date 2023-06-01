@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyjst5h8x82i4"]
+[gd_scene load_steps=2 format=3 uid="uid://c3t68sgibjqtq"]
 
-[ext_resource type="Script" path="res://probIncrease.gd" id="1_inawk"]
+[ext_resource type="Script" path="res://upgrades.gd" id="1_xwt3l"]
 
-[node name="Unicorn flipper" type="Panel"]
+[node name="Upgrades" type="Panel"]
 custom_minimum_size = Vector2(170, 100)
 offset_right = 202.0
 offset_bottom = 135.0
@@ -48,6 +48,10 @@ layout_mode = 2
 [node name="Panel" type="Panel" parent="VScrollBar/VBoxContainer"]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
+script = ExtResource("1_xwt3l")
+prefix = null
+baseCost = null
+probIncreasers = null
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
 layout_mode = 0
@@ -59,12 +63,12 @@ text = "Flavor text 1"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Panel"]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 106.0
-offset_right = 174.0
-offset_bottom = 132.0
-text = "Increases thing"
-script = ExtResource("1_inawk")
+offset_left = 23.0
+offset_top = 93.0
+offset_right = 210.0
+offset_bottom = 186.0
+text = "Increases probability of Unicorn death by 2%"
+autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Panel"]
 layout_mode = 0
@@ -104,5 +108,5 @@ offset_bottom = 97.0
 text = "Cost: 5
 dead Unicorns"
 
-[connection signal="pressed" from="VScrollBar/VBoxContainer/Panel/Button" to="VScrollBar/VBoxContainer/Panel/Label2" method="_on_button_pressed"]
+[connection signal="pressed" from="VScrollBar/VBoxContainer/Panel/Button" to="VScrollBar/VBoxContainer/Panel" method="_on_button_pressed"]
 [connection signal="pressed" from="VScrollBar/VBoxContainer/Panel2/Button" to="VScrollBar/VBoxContainer/Panel2/Label2" method="_on_button_pressed"]
