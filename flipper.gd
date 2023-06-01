@@ -3,7 +3,7 @@ extends Label
 @export var prefix: String = "Things: "
 @export var prob: float = 0.5
 @export var baseCost: int = 5
-@export var multiplier: int = -1
+@export var multiply: bool = false
 @onready var cost: int = baseCost
 @export var flippers: int = 0
 @onready var unicorns: Node = get_node("/root/Control/Unicorn num")
@@ -19,22 +19,16 @@ func _on_button_pressed():
 		text = prefix + str(flippers)
 		box.add_child(timer.instantiate())
 		cost = baseCost * pow(1.15, flippers)
-		button.text = "Cost: " + str(cost)
+		button.text = "Cost: " + str(cost) + "\ndead Unicorns"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if unicorns.things == baseCost:
 		owner.visible = true
 
-func flip() -> bool:
+func flip(multiplier: int = 1) -> bool:
 		if randf() < prob:
-			if multiplier == -1:
-				unicorns.change_things(horseMultiplier)
-			else:
-				unicorns.change_things(horseMultiplier * multiplier)
-				multiplier += 1
+			unicorns.change_things(horseMultiplier * multiplier)
 			return true
 		else:
-			if multiplier > 1:
-				multiplier = 1
 			return false

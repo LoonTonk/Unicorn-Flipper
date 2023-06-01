@@ -26,7 +26,7 @@ text = "Flipper V2s: 0"
 script = ExtResource("1_ci548")
 prefix = "Flipper V2s: "
 baseCost = 10
-multiplier = 1
+multiply = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
