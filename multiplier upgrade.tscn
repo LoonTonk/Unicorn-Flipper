@@ -44,7 +44,7 @@ autowrap_mode = 3
 [node name="Label3" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
-text = "Current Unicorns unalived on Flipper V1 Success: 1"
+text = "Current Unicorns killed on Flipper V1 Success: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -52,7 +52,7 @@ autowrap_mode = 3
 [node name="Label4" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
-text = "Current Unicorns unalived on Flipper V2 Success: 1"
+text = "Current Unicorns killed on Flipper V2 Success: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -60,7 +60,7 @@ autowrap_mode = 3
 [node name="Label5" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
-text = "Current Unicorns unalived on click: 1"
+text = "Current Unicorns killed on click: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -169,7 +169,7 @@ offset_left = -1.0
 offset_top = 92.0
 offset_right = 231.0
 offset_bottom = 185.0
-text = "Increases Unicorns unalived on Flipper V1 success by 1"
+text = "Increases Unicorns killed on Flipper V1 success by 1"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease3"]
@@ -201,7 +201,7 @@ offset_left = -1.0
 offset_top = 93.0
 offset_right = 226.0
 offset_bottom = 186.0
-text = "Increases Unicorns unalived on Flipper V2 success by 1"
+text = "Increases Unicorns killed on Flipper V2 success by 1"
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease4"]

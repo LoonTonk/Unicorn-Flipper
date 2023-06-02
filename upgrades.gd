@@ -33,13 +33,13 @@ func _on_button_pressed():
 				label2.text = "Current Unicorn Flipper V2 fatality rate: " + str(50+count*2) +"%"
 			type.MULTV1:
 				flipper1.flipMultiplier += 1
-				label3.text = "Current Unicorns unalived on Flipper V1 Success: " + str(1+count)
+				label3.text = "Current Unicorns killed on Flipper V1 Success: " + str(1+count)
 			type.MULTV2:
 				flipper2.flipMultiplier += 1
-				label4.text = "Current Unicorns unalived on Flipper V2 Success: " + str(1+count)
+				label4.text = "Current Unicorns killed on Flipper V2 Success: " + str(1+count)
 			type.MULTC:
 				unicorns.clickMultiplier += 1
-				label5.text = "Current Unicorns unalived on click: " + str(1+count)
+				label5.text = "Current Unicorns killed on click: " + str(1+count)
 			type.INSUR:
 				flipper2.insurance += .10
 				label6.text = "Current success boost on flip failure: " + str(10 * count) + "%"
