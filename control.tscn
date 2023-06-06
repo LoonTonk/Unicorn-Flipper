@@ -43,24 +43,23 @@ script = ExtResource("1_b1ijj")
 prefix = "Dead unicorns: "
 
 [node name="Unicorn flipper" parent="." instance=ExtResource("2_b0mt8")]
-visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 138.0
-offset_top = -221.0
-offset_right = 360.0
-offset_bottom = -93.0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -438.0
+offset_top = 103.0
+offset_right = -216.0
+offset_bottom = 231.0
 
 [node name="Unicorn flipper V2" parent="." instance=ExtResource("3_nhv7w")]
-visible = false
-layout_mode = 0
-offset_left = 948.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
 offset_top = 211.0
-offset_right = 1152.0
+offset_right = -6.0
 offset_bottom = 328.0
 
 [node name="Upgrades" parent="." instance=ExtResource("4_ci72w")]
