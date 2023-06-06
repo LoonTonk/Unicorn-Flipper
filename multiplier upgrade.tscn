@@ -10,74 +10,93 @@ custom_minimum_size = Vector2(170, 100)
 offset_right = 436.0
 offset_bottom = 240.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(170, 0)
-layout_mode = 0
+[node name="upgrade" type="Label" parent="."]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 435.0
-offset_bottom = 232.0
-
-[node name="upgrade" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
+offset_bottom = 28.0
 text = "Upgrades:"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(150, 30)
+[node name="Label" type="Label" parent="."]
 layout_mode = 2
+offset_left = 1.0
+offset_top = 50.0
+offset_right = 435.0
+offset_bottom = 76.0
 text = "Current Unicorn Flipper V1 fatality rate: 50%"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="."]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
+offset_left = 1.0
+offset_top = 80.0
+offset_right = 435.0
+offset_bottom = 110.0
 text = "Current Unicorn Flipper V2 fatality rate: 50%"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label3" type="Label" parent="VBoxContainer"]
+[node name="Label3" type="Label" parent="."]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
+offset_left = 2.0
+offset_top = 110.0
+offset_right = 436.0
+offset_bottom = 140.0
 text = "Current Unicorns killed on Flipper V1 Success: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label4" type="Label" parent="VBoxContainer"]
+[node name="Label4" type="Label" parent="."]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
+offset_left = 1.0
+offset_top = 140.0
+offset_right = 435.0
+offset_bottom = 170.0
 text = "Current Unicorns killed on Flipper V2 Success: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label5" type="Label" parent="VBoxContainer"]
+[node name="Label5" type="Label" parent="."]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
+offset_left = 1.0
+offset_top = 171.0
+offset_right = 435.0
+offset_bottom = 201.0
 text = "Current Unicorns killed on click: 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Label6" type="Label" parent="VBoxContainer"]
+[node name="Label6" type="Label" parent="."]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
-text = "Current success boost on flip failure: 0%"
+offset_top = 203.0
+offset_right = 434.0
+offset_bottom = 233.0
+text = "Current success boost after failure: 0%"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="VScrollBar" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(435, 0)
 layout_mode = 0
 offset_left = 1.0
 offset_top = 272.0
-offset_right = 511.0
+offset_right = 443.0
 offset_bottom = 649.0
 
 [node name="VBoxContainer" type="GridContainer" parent="VScrollBar"]
@@ -86,196 +105,217 @@ layout_mode = 2
 
 [node name="Probincrease1" type="Panel" parent="VScrollBar/VBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(200, 150)
+custom_minimum_size = Vector2(435, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
+baseCost = 15
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease1"]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 2.0
 offset_top = 14.0
-offset_right = 160.0
+offset_right = 432.0
 offset_bottom = 40.0
-text = "Flavor text 1"
+text = "Add thrusters"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease1"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 93.0
-offset_right = 210.0
+offset_left = 2.0
+offset_top = 109.0
+offset_right = 435.0
 offset_bottom = 186.0
 text = "Increases Flipper V1 success rate by 2%"
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease1"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 97.0
-text = "Cost: 5
+offset_left = 123.0
+offset_top = 42.0
+offset_right = 301.0
+offset_bottom = 96.0
+text = "Cost: 15
 dead Unicorns"
 
 [node name="Probincrease2" type="Panel" parent="VScrollBar/VBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(200, 150)
+custom_minimum_size = Vector2(435, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
+baseCost = 30
 upgradeType = 1
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 14.0
-offset_right = 160.0
-offset_bottom = 40.0
-text = "Flavor text 2"
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 421.0
+offset_bottom = 33.0
+text = "lgnore safety guidelines"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
 offset_left = 23.0
-offset_top = 93.0
-offset_right = 210.0
+offset_top = 103.0
+offset_right = 415.0
 offset_bottom = 186.0
 text = "Increases Flipper V2 success rate by 2%"
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease2"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 97.0
-text = "Cost: 5
+offset_left = 127.0
+offset_top = 36.0
+offset_right = 305.0
+offset_bottom = 90.0
+text = "Cost: 30
 dead Unicorns"
 
 [node name="Probincrease3" type="Panel" parent="VScrollBar/VBoxContainer"]
-custom_minimum_size = Vector2(200, 150)
+visible = false
+custom_minimum_size = Vector2(435, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
+baseCost = 60
 upgradeType = 2
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease3"]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 1.0
 offset_top = 14.0
-offset_right = 160.0
+offset_right = 436.0
 offset_bottom = 40.0
-text = "Flavor text 3"
+text = "Wider Flipper"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease3"]
 layout_mode = 0
 offset_left = -1.0
-offset_top = 92.0
-offset_right = 231.0
+offset_top = 102.0
+offset_right = 438.0
 offset_bottom = 185.0
 text = "Increases Unicorns killed on Flipper V1 success by 1"
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease3"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 97.0
-text = "Cost: 5
+offset_left = 121.0
+offset_top = 41.0
+offset_right = 299.0
+offset_bottom = 95.0
+text = "Cost: 60
 dead Unicorns"
 
 [node name="Probincrease4" type="Panel" parent="VScrollBar/VBoxContainer"]
-custom_minimum_size = Vector2(200, 150)
+visible = false
+custom_minimum_size = Vector2(435, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
+baseCost = 100
 upgradeType = 4
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease4"]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 8.0
 offset_top = 14.0
-offset_right = 160.0
+offset_right = 430.0
 offset_bottom = 40.0
-text = "Flavor text 4"
+text = "Increased air time"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease4"]
 layout_mode = 0
 offset_left = -1.0
-offset_top = 93.0
-offset_right = 226.0
-offset_bottom = 186.0
+offset_top = 103.0
+offset_right = 439.0
+offset_bottom = 189.0
 text = "Increases Unicorns killed on Flipper V2 success by 1"
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease4"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 97.0
-text = "Cost: 5
+offset_left = 132.0
+offset_top = 41.0
+offset_right = 310.0
+offset_bottom = 95.0
+text = "Cost: 100
 dead Unicorns"
 
 [node name="Probincrease5" type="Panel" parent="VScrollBar/VBoxContainer"]
-custom_minimum_size = Vector2(200, 150)
+visible = false
+custom_minimum_size = Vector2(435, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
+baseCost = 100
 upgradeType = 5
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease5"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 14.0
-offset_right = 160.0
-offset_bottom = 40.0
-text = "Flavor text 5"
+offset_left = 190.0
+offset_top = 5.0
+offset_right = 229.0
+offset_bottom = 31.0
+text = "PETA"
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease5"]
 layout_mode = 0
 offset_left = -1.0
-offset_top = 92.0
-offset_right = 233.0
+offset_top = 102.0
+offset_right = 436.0
 offset_bottom = 185.0
 text = "Increases Unicorns manually flipped at a time by 1"
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease5"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 97.0
-text = "Cost: 5
+offset_left = 124.0
+offset_top = 35.0
+offset_right = 302.0
+offset_bottom = 89.0
+text = "Cost: 100
 dead Unicorns"
 
 [node name="Probincrease6" type="Panel" parent="VScrollBar/VBoxContainer"]
-custom_minimum_size = Vector2(200, 150)
+visible = false
+custom_minimum_size = Vector2(435, 150)
 layout_mode = 2
 script = ExtResource("1_xwt3l")
+baseCost = 30
 upgradeType = 3
 
 [node name="Label" type="Label" parent="VScrollBar/VBoxContainer/Probincrease6"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 16.0
-offset_right = 217.0
-offset_bottom = 42.0
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 425.0
+offset_bottom = 35.0
 text = "Unicorn Flipping Insurance"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VScrollBar/VBoxContainer/Probincrease6"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 103.0
-offset_right = 249.0
+offset_right = 437.0
 offset_bottom = 196.0
 text = "If a flipper fails, increase probability of next flip succeeding by 10%"
 label_settings = SubResource("LabelSettings_ae3ok")
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="VScrollBar/VBoxContainer/Probincrease6"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 97.0
-text = "Cost: 5
+offset_left = 128.0
+offset_top = 42.0
+offset_right = 306.0
+offset_bottom = 96.0
+text = "Cost: 30
 dead Unicorns"
 
 [connection signal="pressed" from="VScrollBar/VBoxContainer/Probincrease1/Button" to="VScrollBar/VBoxContainer/Probincrease1" method="_on_button_pressed"]

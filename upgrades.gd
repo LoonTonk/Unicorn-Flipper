@@ -7,12 +7,12 @@ extends Panel
 @onready var unicorns: Node = get_node("/root/Control/Unicorn num")
 @onready var flipper1 : Node = get_node("/root/Control/Unicorn flipper")
 @onready var flipper2 : Node = get_node("/root/Control/Unicorn flipper V2")
-@onready var label1: Node = get_node("../../../VBoxContainer/Label")
-@onready var label2: Node = get_node("../../../VBoxContainer/Label2")
-@onready var label3: Node = get_node("../../../VBoxContainer/Label3")
-@onready var label4: Node = get_node("../../../VBoxContainer/Label4")
-@onready var label5: Node = get_node("../../../VBoxContainer/Label5")
-@onready var label6: Node = get_node("../../../VBoxContainer/Label6")
+@onready var label1: Node = get_node("../../../Label")
+@onready var label2: Node = get_node("../../../Label2")
+@onready var label3: Node = get_node("../../../Label3")
+@onready var label4: Node = get_node("../../../Label4")
+@onready var label5: Node = get_node("../../../Label5")
+@onready var label6: Node = get_node("../../../Label6")
 @onready var button: Node = get_node("Button")
 enum type {PROB1, PROB2, MULTV1, INSUR, MULTV2, MULTC}
 @export var upgradeType: type = type.PROB1
@@ -22,7 +22,7 @@ func _on_button_pressed():
 	if unicorns.things >= cost:
 		unicorns.change_things(-cost)
 		count += 1
-		cost = baseCost * pow(2, count)
+		cost = baseCost * pow(1.5, count)
 		button.text = "Cost: " + str(cost) + "\ndead Unicorns"
 		match upgradeType:
 			type.PROB1:
